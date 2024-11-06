@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "hello-world.name" . }}-deployment
+  name: {{ include "hello-world.name" . }}-helm-deployment
   namespace: prerna
   labels:
     app: {{ include "hello-world.name" . }}

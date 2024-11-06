@@ -4,7 +4,7 @@ metadata:
   labels:
     app: {{ include "hello-world.name" . }}
     type: backend
-  name: {{ include "hello-world.name" . }}-service
+  name: {{ include "hello-world.name" . }}-helm-service
   namespace: prerna
 spec:
   ports:
