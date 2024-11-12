@@ -1,0 +1,6 @@
+replicaCount: 3
+
+image:
+  repository: prerna1306/prerna
+  tag: 1.0.3
+  pullPolicy: Always

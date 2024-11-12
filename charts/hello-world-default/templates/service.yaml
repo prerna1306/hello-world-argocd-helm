@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: {{ include "hello-world.name" . }}
+    type: backend
+  name: {{ include "hello-world.name" . }}-helm-service
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30009
+  selector:
+    app: {{ include "hello-world.name" . }}
+    type: backend
+  type: NodePort
+status:
+  loadBalancer: {}
